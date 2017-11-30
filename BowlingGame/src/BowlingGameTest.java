@@ -35,7 +35,7 @@ public class BowlingGameTest extends TestCase {
 	public void test01() {
        BowlingGame bowlingGame = new BowlingGame("[1,5][2,6]");
 //        assertEquals(0, bowlingGame.checkType());
-       assertEquals(14, bowlingGame.getScore());
+       assertEquals(-1, bowlingGame.getScore());
     }	
 	
 	@Test
