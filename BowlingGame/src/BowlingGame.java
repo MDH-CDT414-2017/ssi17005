@@ -146,13 +146,5 @@ public class BowlingGame {
 		return game.matches("(\\[([0-9]|10),[0-9]\\]){10}\\[([0-9]|10)\\]");
 	}
 
-	//checks if the frame is correct by checking if the sum of the two scores/throws is 10 
-	public boolean checkSum(Frame frameTest) {
-		if (frameTest.getThrow1() + frameTest.getThrow2() > 10) {
-			return false;
-		}
-		else {
-			return true;
-		}
-}
+	
 }
