@@ -96,7 +96,7 @@ public class BowlingGame {
 			}
 			
 			//spare frame score calculator
-			else if(checkType(this.frame.get(i))==2){
+			else {
 				
 				if(i==this.frame.size()-2){
 					sum = sum +  10 + this.frame.get(i+1).getThrow1();
@@ -124,7 +124,7 @@ public class BowlingGame {
 			f.setStrike(true);
 		    return 1;
 		}
-		else if((f.getThrow1()+f.getThrow2()==10) && f.getThrow2()!=0){
+		else if((f.getThrow1()+f.getThrow2()==10)){
 			f.setSpare(true);
 			return 2;
 		}
