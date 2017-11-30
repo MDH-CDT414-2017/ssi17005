@@ -67,23 +67,17 @@ public class BowlingGame {
 			if(checkType(this.frame.get(i))==0){
 				
 				sum = sum + this.frame.get(i).getThrow1() + this.frame.get(i).getThrow2();
-				System.out.println(i);
-				System.out.println(this.frame.get(i).getThrow1());
-		        System.out.println(this.frame.get(i).getThrow2());	
+
+		
 			}
 			
 			//strike frame score calculator
 			else if(checkType(this.frame.get(i))==1) {
 				
-				if(i==this.frame.size()-2) {
-					if(this.frame.get(this.frame.size()-1).getThrow1()==10) {
-					      sum = sum + this.frame.get(i+1).getThrow1() + this.frame.get(i+1).getThrow2() + 10;
-					      return sum;
-					}
-					else {
+				if(i==this.frame.size()-2) {			
 						sum = sum + this.frame.get(i+1).getThrow1() + this.frame.get(i+1).getThrow2() + 10;
 						return sum;
-					}
+					
 				}	
 					else {
 						if(this.frame.get(i+1).getThrow1()==10){
@@ -100,7 +94,7 @@ public class BowlingGame {
 				
 				if(i==this.frame.size()-2){
 					sum = sum +  10 + this.frame.get(i+1).getThrow1();
-					System.out.println(sum);
+					
 					return sum;
 					
 				}
@@ -110,7 +104,7 @@ public class BowlingGame {
 			}
 		}
 		
-		System.out.println("Sum = " +sum);
+	
 		return sum;
 	}
 	
@@ -120,14 +114,16 @@ public class BowlingGame {
 	
 	// check if the frame is strike(return 1), spare(return 2) or open(return 0)
 	public int checkType(Frame f) {
-		if((f.getThrow1()+f.getThrow2()==10) && f.getThrow2()==0){	
-			f.setStrike(true);
+		if((f.getThrow1()+f.getThrow2()==10)){	
+			if(f.getThrow2()==0) {
 		    return 1;
+		    }
+			else {
+				
+				return 2;
+			}
 		}
-		else if((f.getThrow1()+f.getThrow2()==10)){
-			f.setSpare(true);
-			return 2;
-		}
+		
 		else return 0;
 	}
 
@@ -145,6 +141,10 @@ public class BowlingGame {
 	public boolean verifyLastSpareStringFormat(String game) {
 		return game.matches("(\\[([0-9]|10),[0-9]\\]){10}\\[([0-9]|10)\\]");
 	}
+
+
+
+
 
 	
 }
