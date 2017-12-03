@@ -7,6 +7,7 @@ public class Frame {
 	private boolean strike;
 	private boolean spare;
 	
+
 	public int getThrow1() {
 		return throw1;
 	}
@@ -20,4 +21,6 @@ public class Frame {
 		this.throw2 = throw2;
 	}
 	
+
+
 }

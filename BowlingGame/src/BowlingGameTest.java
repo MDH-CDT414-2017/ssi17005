@@ -179,11 +179,5 @@ public class BowlingGameTest extends TestCase {
 		
 	}
 	
-	@Test
-	public void testString()
-	{
-		BowlingGame game1 = new BowlingGame("[2,3][3,3][4,5][2,4][4,3][3,4][5,5][3,4][2,1][5,3]");
-		 //assertEquals(true, game1.validInput("[2,3][3,3][4,5][2,4][4,3][3,4][5,5][3,4][2,1][5,3]"));
-	}
 	
 }
